@@ -1,0 +1,60 @@
+/* lineas de comentario en css*/
+
+/*  mediante nombre de etiqueta */
+
+/*  mediante CLASS */
+
+.contenedor-imagenes {
+  display: flex; /* Esto las pone en fila */
+  justify-content: center; /* Centra las imágenes si hay espacio */
+  gap: 10px; /* Espacio entre las imágenes (opcional) */
+}
+
+.contenedor-imagenes img {
+  width: 30%; /* Para 3 imágenes, cada una ocupa ~33%, 30% da margen */
+  height: auto; /* Mantiene la proporción */
+  margin: 0 5px; /* Añade un pequeño margen lateral para separación */
+  /* Si quieres que se ajusten perfectamente a 33.3% sin espacio: */
+  /* width: 33.33%; */
+}
+
+/* Estilos para el contenedor principal */
+  
+  /* Estilos para cada bloque (imagen + texto) */
+  .item-imagen {
+    flex-basis: 20%; /* Ocupa el 20% del ancho (para 5 imágenes), ajusta a 25% para 4 */
+    text-align: center; /* Centra el texto y la imagen dentro de su bloque */
+    box-sizing: border-box; /* Incluye padding y border en el ancho */
+  }
+
+  /* Estilos para las imágenes */
+  .item-imagen img {
+    max-width: 100%; /* Asegura que la imagen no se desborde */
+    height: auto; /* Mantiene la proporción */
+    display: block; /* Elimina espacio extra debajo de la imagen */
+    margin-bottom: 5px; /* Espacio entre imagen y texto */
+  }
+
+  /* Estilos para el texto debajo */
+  .item-imagen p {
+    margin-top: 0; /* Sin margen superior */
+    font-size: 14px;
+    color: #333;
+  }
+
+     .mi-boton {
+  background-color: #007bff; /* Color de fondo */
+  color: white; /* Color del texto */
+  padding: 10px 20px; /* Espaciado interno (arriba/abajo y lados) */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Esquinas redondeadas */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  font-size: 16px; /* Tamaño de la letra */
+  text-decoration: none; /* Quita la línea del enlace */
+  display: inline-block; /* Permite aplicar padding y márgenes */
+  transition: background-color 0.3s ease; /* Transición suave para efectos */
+}
+
+
+
+/* mediante ID */
