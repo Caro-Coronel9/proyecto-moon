@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/Style.css">
+       <title>Contacto</title>
 </head>
 <body>
     <!--etiqueta para el banner principal  -->
     <header>
         <!-- etiqueta para las img -->
-         <a href="../index.html"><img style="display: block; margin: auto;"src="../img/logo.png" alt=""></a>
+         
+         <a href="../index.html"><img src="../img/logo.png" alt=""></a>
          
         <!-- etiqueta para el menu de navegacion -->
          <nav>
@@ -27,53 +29,47 @@
      </header>
 
     <!-- etiqueta para el contenido principal -->
-     <main>
-        <!-- titulo de mi pagina -->
+    <main>
+    <h4>CONTACTO</h4>
 
-         <!-- CSS, estilos en lineas -->
-         <div class="mi-caja">
-          <h4> CONTACTO</h4>
-          <H5> Nombre Completo </H5>
-         </div>
+    <form class="formulario">
+        <div class="form-group">
+            <label for="nombre">Nombre Completo</label>
+            <input type="text" id="nombre" class="mi-input">
+        </div>
 
-<input type="text" class="mi-input">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" id="email" class="mi-input">
+        </div>
 
-<div class="mi-caja">
-        
-          <H5> Email </H5>
-         </div>
- <input type="text" class="mi-input">
+        <div class="form-group">
+            <label for="telefono">Teléfono (opcional)</label>
+            <input type="text" id="telefono" class="mi-input">
+        </div>
 
- <div class="mi-caja">
-        
-          <H5> Telefono (opcional) </H5>
-         </div>
- <input type="text" class="mi-input">
+        <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" class="mi-input"></textarea>
+        </div>
 
- <div class="mi-caja">
-        
-          <H5> Mensaje </H5>
-         </div>
- <input type="text" class="mi-input">
-
- <button class="mi-boton">ENVIAR</button>
-
-
-         </main>
+        <button class="mi-boton">ENVIAR</button>
+    </form>
+</main>
 
      <!-- datos de contacto -->
       <section class="productos">
         <article>
-        <h3 style="text-align: center;">CONTACTOS</h3>
-            <p style="text-align: center;">moon.pottery11@gmail.com</p>
-             <p style="text-align: center;"> 011 25310203</p> 
-              <p style="text-align: center;">Villa Urquiza</p> 
+        <h3>CONTACTOS</h3>
+            <p>moon.pottery11@gmail.com</p>
+            <p> 011 25310203</p> 
+            <p>Villa Urquiza</p> 
         </article>
       </section>
 
     <!-- etiqueta para el pie de pagina -->
      <footer>
-        <p style="text-align: center;"> Todos los derechos reservados</p>
+        <p style="text-align: center;font-family: Arial, Helvetica, sans-serif;margin: 30px;"> Todos los derechos reservados</p>
     </footer>
 </body>
 </html>

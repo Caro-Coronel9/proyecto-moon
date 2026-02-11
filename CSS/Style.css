@@ -1,60 +1,120 @@
 /* lineas de comentario en css*/
 
-/*  mediante nombre de etiqueta */
+/*  box-model */
+/* margin - padding */
 
-/*  mediante CLASS */
+/* RESET */
+*{ margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* estilos de header */
+header { 
+  background-color: #FFFFFE;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 30px;
+  }
+
+header img {width: 10%;
+  }
+  header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    
+   }
+
+   /* estilo de main */
+  
+ /*  mediante CLASS */
+
+ h4, h5, h3, p {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px;
+}
+
+
+.contenedor-productos {
+   display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 80%;
+  margin: 40px auto;
+}
+
+.producto {
+    width: 250px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.producto p {
+    margin: 5px 0;
+}
 
 .contenedor-imagenes {
   display: flex; /* Esto las pone en fila */
   justify-content: center; /* Centra las imágenes si hay espacio */
-  gap: 10px; /* Espacio entre las imágenes (opcional) */
+  gap: 30px; /* Espacio entre las imágenes (opcional) */
 }
 
 .contenedor-imagenes img {
   width: 30%; /* Para 3 imágenes, cada una ocupa ~33%, 30% da margen */
   height: auto; /* Mantiene la proporción */
-  margin: 0 5px; /* Añade un pequeño margen lateral para separación */
+  margin: 5px; /* Añade un pequeño margen lateral para separación */
   /* Si quieres que se ajusten perfectamente a 33.3% sin espacio: */
   /* width: 33.33%; */
 }
 
-/* Estilos para el contenedor principal */
-  
-  /* Estilos para cada bloque (imagen + texto) */
-  .item-imagen {
-    flex-basis: 20%; /* Ocupa el 20% del ancho (para 5 imágenes), ajusta a 25% para 4 */
-    text-align: center; /* Centra el texto y la imagen dentro de su bloque */
-    box-sizing: border-box; /* Incluye padding y border en el ancho */
-  }
-
-  /* Estilos para las imágenes */
-  .item-imagen img {
-    max-width: 100%; /* Asegura que la imagen no se desborde */
-    height: auto; /* Mantiene la proporción */
-    display: block; /* Elimina espacio extra debajo de la imagen */
-    margin-bottom: 5px; /* Espacio entre imagen y texto */
-  }
-
-  /* Estilos para el texto debajo */
-  .item-imagen p {
-    margin-top: 0; /* Sin margen superior */
-    font-size: 14px;
-    color: #333;
-  }
-
-     .mi-boton {
-  background-color: #007bff; /* Color de fondo */
-  color: white; /* Color del texto */
-  padding: 10px 20px; /* Espaciado interno (arriba/abajo y lados) */
-  border: none; /* Sin borde */
-  border-radius: 5px; /* Esquinas redondeadas */
-  cursor: pointer; /* Cambia el cursor al pasar por encima */
-  font-size: 16px; /* Tamaño de la letra */
-  text-decoration: none; /* Quita la línea del enlace */
-  display: inline-block; /* Permite aplicar padding y márgenes */
-  transition: background-color 0.3s ease; /* Transición suave para efectos */
+.formulario {
+    width: 400px;          /* ancho del formulario */
+    margin: 50px auto;     /* centrado horizontal */
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
+.form-group {
+    display: flex;
+    flex-direction: column; /* label arriba, input debajo */
+}
 
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
 
-/* mediante ID */
+.mi-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.mi-boton {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mi-boton:hover {
+    background-color: #555;
+}
+

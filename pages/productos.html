@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/Style.css">
     <title>Productos</title>
 </head>
 <body>
      <!--etiqueta para el banner principal  -->
-    <header>
+      <header>
         <!-- etiqueta para las img -->
-         <a href="../index.html"><img style="display: block; margin: auto;" src="../img/logo.png" alt=""></a>
-         
+         <a href="../index.html"><img src="../img/logo.png" alt=""></a>
+
         <!-- etiqueta para el menu de navegacion -->
          <nav>
             <!-- etiqueta para una lista desordenada -->
              <ul>
                 <li> 
-                    <a href="../index.html">Inicio</a>
-                     </li>
+                     <a href="../index.html">Inicio</a>
+                 </li>
                 <li> Productos </li>
-                <li> <a href="../pages/contacto.html">Contacto</a>
-                     </li>
+                <li>
+                    <a href="../pages/contacto.html">Contacto</a>
+                 </li>
              </ul>
          </nav>
     </header>
@@ -34,47 +36,58 @@
 
          <!-- imagenes de producto  -->
          
-          <img src="../img/PRODUCTO1.jpg" alt="">
-          
-          <!--  detalle de producto -->
+         <div class="contenedor-productos">
+
+            <div class="producto">
+          <img src="../img/PRODUCTO1.jpg" alt="producto 1">
+                    <!--  detalle de producto -->
           <p> Taza café Cuadrille negro</p>
           <p> $10.000,00 </p>
+         </div>
 
+
+         <div class="producto">
           <img src="../img/PRODUCTO2.jpg" alt="">
-
           <!--  detalle de producto -->
           <p> Taza cookie Roma</p>
           <p> $20.000,00 </p>
-          
+          </div>
+
+
+           <div class="producto">
           <img src="../img/PRODUCTO3.jpg" alt="">
 
           <!-- detalle de producto -->
           <p> Plato tostada Roma</p>
           <p> $13.000,00 </p>
+          </div>
+
+          <div class="producto">
 
           <img src="../img/PRODUCTO4.jpg" alt="">
 
           <!--  detalle de producto -->
           <p> Plato Tostada</p>
           <p> $13.000,00 </p>
-          
-
+         </div> 
        
 
      </main>
      <!-- etiqueta de contenido generico -->
       <section class="productos">
+
         <article>
-            <h3 style="text-align: center;">CONTACTOS</h3>
-            <p style="text-align: center;">moon.pottery11@gmail.com</p>
-             <p style="text-align: center;"> 011 25310203</p> 
-              <p style="text-align: center;">Villa Urquiza</p> 
+            
+            <h3>CONTACTOS</h3>
+            <p>moon.pottery11@gmail.com</p>
+            <p> 011 25310203</p> 
+            <p>Villa Urquiza</p> 
         </article>
       </section>
 
     <!-- etiqueta para el pie de pagina -->
      <footer>
-        <p style="text-align: center;"> Todos los derechos reservados</p>
+        <p style="text-align: center;font-family: Arial, Helvetica, sans-serif;margin: 30px;"> Todos los derechos reservados</p>
     </footer>
 </body>
 </html>
