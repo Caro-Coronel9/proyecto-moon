@@ -38,6 +38,13 @@ header img {width: 10%;
   margin: 10px;
 }
 
+/* Imagen de portada responsive */
+.portada {
+    width: 100%;      /* ocupa todo el ancho disponible */
+    height: auto;     /* mantiene proporción original */
+    display: block;   /* elimina espacio extra debajo de la imagen */
+}
+
 
 .contenedor-productos {
    display: grid;
