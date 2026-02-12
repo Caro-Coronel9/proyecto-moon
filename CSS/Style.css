@@ -48,14 +48,14 @@ header img {width: 10%;
 
 .contenedor-productos {
    display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  width: 80%;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 40px;
+  width: 70%;
   margin: 40px auto;
 }
 
 .producto {
-    width: 250px;
+    width: center;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -125,3 +125,104 @@ header img {width: 10%;
     background-color: #555;
 }
 
+/* estilos para mobile */
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: column;   /* vertical en mobile */
+  align-items: center;
+  padding: 15px;
+  gap: 10px;
+  background-color: #FFFFFE;
+}
+
+/* Logo */
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+/* Nav */
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;   /* menú vertical */
+  gap: 10px;
+  text-align: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding: 8px;
+  display: block;
+}
+
+/* Portada */
+.portada {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 15px;
+}
+
+/* Textos */
+h4, h5, h3, p {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px;
+}
+
+/* Productos */
+.contenedor-imagenes {
+  display: flex;
+  flex-direction: column;   /* 1 columna en mobile */
+  gap: 15px;
+  padding: 15px;
+}
+
+.contenedor-imagenes img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .contenedor-productos {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* estilos para desktop */
+
+@media (min-width: 768px) {
+
+  header {
+    flex-direction: row;        /* horizontal en desktop */
+    justify-content: space-between;
+  }
+
+  nav ul {
+    flex-direction: row;        /* menú horizontal */
+    gap: 25px;
+  }
+
+  .contenedor-imagenes {
+    flex-direction: row;        /* productos en fila */
+    justify-content: center;
+  }
+
+  .contenedor-imagenes img {
+    width: 30%;
+  }
+}
