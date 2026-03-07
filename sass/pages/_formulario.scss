@@ -1,0 +1,37 @@
+
+/* Estilos del formulario de contacto */
+
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+
+.formulario {
+  width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: $color-fondo-form;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+  }
+
+  .mi-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: $border-radius;
+    font-size: 14px;
+  }
+
+  .mi-boton {
+    @include boton;
+  }
+}

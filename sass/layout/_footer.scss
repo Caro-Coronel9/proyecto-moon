@@ -1,0 +1,10 @@
+
+/* Estilos del pie de página del sitio */
+
+@use "../utilities/variables" as *;
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: $color-rosa; 
+}

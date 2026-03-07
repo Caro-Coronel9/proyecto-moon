@@ -1,0 +1,26 @@
+
+/* Organización de grillas y contenedores del sitio */
+
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+
+.contenedor-productos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  width: 70%;
+  margin: 40px auto;
+}
+
+.contenedor-imagenes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px;
+
+  img {
+    width: 30%;
+    @include responsive-img;
+    border-radius: $border-radius;
+  }
+}

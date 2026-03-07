@@ -1,163 +1,54 @@
-/* lineas de comentario en css*/
-
-/*  box-model */
-/* margin - padding */
-
+@charset "UTF-8";
+/* Variables usadas en el sitio */
+/* Mixins reutilizables para aplicar estilos comunes */
+/* Estilos base para reiniciar los valores del navegador */
 /* RESET */
-*{ margin: 0;
+* {
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Estilos del encabezado y menú de navegación */
 .banner-rosa {
   background-color: #ffd6e7;
   font-family: Helvetica, Arial, sans-serif;
   font-size: medium;
-    text-align: center;
+  text-align: center;
   padding: 10px;
-  box-sizing: border-box
-  }
-
-/* estilos de header */
-
-.navbar-brand img {
-  height: 70px; /* logo más grande */
-}
-
-.nav-link {
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: 500;
 }
 
 .navbar {
   padding: 15px 30px;
 }
-
-
-
-/* Imagen de portada responsive */
-.portada {
-    width: 100%;      /* ocupa todo el ancho disponible */
-    height: auto;     /* mantiene proporción original */
-    display: block;   /* elimina espacio extra debajo de la imagen */
+.navbar .nav-link {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+.navbar .navbar-brand img {
+  height: 70px;
 }
 
-   /* estilo de main */
-  
- /*  mediante CLASS */
-
- h4, h5, h3, p {
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 10px;
-}
-.contenedor-productos {
-   display: grid;
-  grid-template-columns: repeat(2, 2fr);
-  gap: 40px;
-  width: 70%;
-  margin: 40px auto;
-}
-
-.producto {
-    width: center;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.producto img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.producto p {
-    margin: 5px 0;
-}
-
-.contenedor-imagenes {
-  display: flex; /* Esto las pone en fila */
-  justify-content: center; /* Centra las imágenes si hay espacio */
-  gap: 30px; /* Espacio entre las imágenes (opcional) */
-}
-
-.contenedor-imagenes img {
-  width: 30%; /* Para 3 imágenes, cada una ocupa ~33%, 30% da margen */
-  height: auto; /* Mantiene la proporción */
-  margin: 5px; /* Añade un pequeño margen lateral para separación */
-  /* Si quieres que se ajusten perfectamente a 33.3% sin espacio: */
-  /* width: 33.33%; */
-}
-
-.formulario {
-    width: 400px;          /* ancho del formulario */
-    margin: 50px auto;     /* centrado horizontal */
-    padding: 20px;
-    background-color: #f5f5f5;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column; /* label arriba, input debajo */
-}
-
-.form-group label {
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.mi-input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-.mi-boton {
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.mi-boton:hover {
-    background-color: #555;
-}
-
-/* estilos para mobile */
-
-/* Header */
 header {
   display: flex;
-  flex-direction: column;   /* vertical en mobile */
+  flex-direction: column;
   align-items: center;
   padding: 15px;
   gap: 10px;
   background-color: #FFFFFE;
 }
-
-/* Logo */
-.logo {
+header .logo {
   width: 100px;
   height: auto;
 }
-
-/* Nav */
-nav ul {
+header nav ul {
   list-style: none;
   display: flex;
-  flex-direction: column;   /* menú vertical */
+  flex-direction: column;
   gap: 10px;
   text-align: center;
 }
-
-nav ul li a {
+header nav ul li a {
   text-decoration: none;
   color: #333;
   font-family: Arial, Helvetica, sans-serif;
@@ -165,8 +56,44 @@ nav ul li a {
   padding: 8px;
   display: block;
 }
+header nav ul li a:hover {
+  color: #ff6fa0;
+  background-color: #ffd6e7;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
 
-/* Portada */
+/* Estilos del pie de página del sitio */
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #ffd6e7;
+}
+
+/* Organización de grillas y contenedores del sitio */
+.contenedor-productos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  width: 70%;
+  margin: 40px auto;
+}
+
+.contenedor-imagenes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px;
+}
+.contenedor-imagenes img {
+  width: 30%;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+}
+
+/* Estilos de la página principal */
 .portada {
   width: 100%;
   height: auto;
@@ -174,60 +101,131 @@ nav ul li a {
   margin-bottom: 15px;
 }
 
-/* Textos */
-h4, h5, h3, p {
+h3, h4, h5, p {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   margin: 10px;
 }
 
-/* Productos */
-.contenedor-imagenes {
-  display: flex;
-  flex-direction: column;   /* 1 columna en mobile */
-  gap: 15px;
-  padding: 15px;
+.producto {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
-
-.contenedor-imagenes img {
+.producto img {
   width: 100%;
   height: auto;
-  border-radius: 5px;
+  display: block;
+  margin-bottom: 10px;
+}
+.producto p {
+  margin: 5px 0;
 }
 
-/* Footer */
-footer {
+/* Estilos del formulario de contacto */
+.formulario {
+  width: 400px;
+  margin: 50px auto;
   padding: 20px;
-  text-align: center;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.formulario .form-group {
+  display: flex;
+  flex-direction: column;
+}
+.formulario .form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.formulario .mi-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.formulario .mi-boton {
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.formulario .mi-boton:hover {
+  background-color: #555;
 }
 
+/* Media queries para adaptar el sitio a mobile, tablet y desktop */
+/* Estilos para Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .contenedor-productos {
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    margin: 30px auto;
+  }
+  .contenedor-imagenes {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+  }
+  .contenedor-imagenes img {
+    width: 45%;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  nav ul {
+    flex-direction: row;
+    gap: 15px;
+  }
+}
+/* Estilos para  Mobile */
 @media (max-width: 768px) {
   .contenedor-productos {
     grid-template-columns: 1fr;
   }
+  .contenedor-imagenes {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+  .contenedor-imagenes img {
+    width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+  }
 }
-
-
-/* estilos para desktop */
-
-@media (min-width: 768px) {
-
+/* Estilos para Desktop */
+@media (min-width: 1025px) {
   header {
-    flex-direction: row;        /* horizontal en desktop */
+    flex-direction: row;
     justify-content: space-between;
   }
-
   nav ul {
-    flex-direction: row;        /* menú horizontal */
+    flex-direction: row;
     gap: 25px;
   }
-
   .contenedor-imagenes {
-    flex-direction: row;        /* productos en fila */
+    flex-direction: row;
     justify-content: center;
   }
-
   .contenedor-imagenes img {
     width: 30%;
+    width: 100%;
+    height: auto;
+    display: block;
   }
 }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,32 @@
+
+/* Mixins reutilizables para aplicar estilos comunes */
+
+@use "variables" as *;
+
+// Flex center
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Imagen responsive
+@mixin responsive-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Botón
+@mixin boton {
+  padding: 10px;
+  background-color: $color-gris;
+  color: white;
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-gris-claro;
+  }
+}

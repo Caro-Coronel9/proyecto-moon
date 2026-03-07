@@ -1,0 +1,30 @@
+
+/* Estilos de la página principal */
+
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+
+.portada {
+  @include responsive-img;
+  margin-bottom: 15px;
+}
+
+h3, h4, h5, p {
+  text-align: center;
+  font-family: $font-secundaria;
+  margin: 10px;
+}
+
+.producto {
+  text-align: center;
+  font-family: $font-secundaria;
+
+  img {
+    @include responsive-img;
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin: 5px 0;
+  }
+}
