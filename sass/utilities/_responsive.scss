@@ -13,13 +13,17 @@
   }
 
   .contenedor-imagenes {
+    display: flex;
     flex-direction: row;
+    flex-wrap: wrap; 
     justify-content: center;
     gap: 20px;
     padding: 15px;
 
     img {
-      width: 45%;
+      width: calc(50% - 10px);       /* cada imagen ocupa 45% de ancho de contenedor */
+      height: auto;
+      display: block;
       @include responsive-img;
     }
   }
@@ -68,12 +72,14 @@
   }
 
   .contenedor-imagenes {
-    flex-direction: row;
+ display: flex;
     justify-content: center;
+    gap: 20px;
 
     img {
-      width: 30%;
-      @include responsive-img;
+      width: 28%; /* menos del 30% para compensar gap */
+    flex-shrink: 0; /* evita que se encojan */
+  
     }
   }
 }
