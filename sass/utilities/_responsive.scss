@@ -21,7 +21,7 @@
     padding: 15px;
 
     img {
-      width: calc(50% - 10px);       /* cada imagen ocupa 45% de ancho de contenedor */
+      width: calc(50% - 10px);       
       height: auto;
       display: block;
       @include responsive-img;
@@ -77,8 +77,8 @@
     gap: 20px;
 
     img {
-      width: 28%; /* menos del 30% para compensar gap */
-    flex-shrink: 0; /* evita que se encojan */
+      width: 28%; 
+    flex-shrink: 0; 
   
     }
   }

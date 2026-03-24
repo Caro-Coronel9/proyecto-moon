@@ -175,7 +175,7 @@ h2, h3, h4, p {
     padding: 15px;
   }
   .contenedor-imagenes img {
-    width: calc(50% - 10px); /* cada imagen ocupa 45% de ancho de contenedor */
+    width: calc(50% - 10px);
     height: auto;
     display: block;
     width: 100%;
@@ -226,8 +226,8 @@ h2, h3, h4, p {
     gap: 20px;
   }
   .contenedor-imagenes img {
-    width: 28%; /* menos del 30% para compensar gap */
-    flex-shrink: 0; /* evita que se encojan */
+    width: 28%;
+    flex-shrink: 0;
   }
 }
 
